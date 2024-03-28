@@ -6,10 +6,10 @@ let i = 0;
 function handleDeviceShake(event) {
 	if(i > 2) return;
     // Отримуємо дані про прискорення з події
-    acceleration = event.accelerationIncludingGravity;
+    const acceleration = event.accelerationIncludingGravity;
 
     // Обчислюємо величину прискорення
-    magnitude = Math.sqrt(
+    const magnitude = Math.sqrt(
         Math.pow(acceleration.x, 2) +
         Math.pow(acceleration.y, 2) +
         Math.pow(acceleration.z, 2)
