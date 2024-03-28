@@ -25,3 +25,10 @@ function handleDeviceShake(event) {
 	const newCard = getElementById('newCard');
 	newCard.textContent = "До наступної карти";
 }
+
+window.onload = function() {
+	const newCardButton = document.getElementById('newCard');
+	newCardButton.onclick = function() {
+		window.addEventListener('devicemotion', handleDeviceShake);
+	};
+};
