@@ -19,7 +19,7 @@ function handleDeviceShake(event) {
     // тоді реагуємо на тряску телефона
     const threshold = 50; // Порогове значення для визначення тряски
     if (magnitude > threshold && (Date.now() - lastShakeTime) > shakeInterval) {
-        chosenCards.push(getRandomCard(i)); // Викликаємо функцію для отримання випадкової карти
+        chosenCards.push(getRandomCard(i, chosenCards)); // Викликаємо функцію для отримання випадкової карти
 		i++;
 		lastShakeTime = Date.now();
     }
