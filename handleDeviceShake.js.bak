@@ -1,5 +1,6 @@
 let lastShakeTime = Date.now();
 const shakeInterval = 3000;
+const chosenCards = [];
 let i = 0;
 
 function handleDeviceShake(event) {
