@@ -23,6 +23,7 @@ function handleDeviceShake(event) {
 		i++;
 		lastShakeTime = Date.now();
     }
+	return;
 }
 
 // Додаємо прослуховувач події "devicemotion" для виклику функції при трясці телефона
