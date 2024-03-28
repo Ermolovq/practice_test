@@ -19,8 +19,7 @@ function handleDeviceShake(event) {
     if (magnitude > threshold) {
         chosenCards.push(getRandomCard(i, chosenCards)); // Викликаємо функцію для отримання випадкової карти
 		i++;
-		setTimeout(function() {
-		}, 1000);
+		setTimeout(function() {}, 1000);
     }
 }
 
