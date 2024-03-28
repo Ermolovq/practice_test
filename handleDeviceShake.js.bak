@@ -1,7 +1,5 @@
 const chosenCards = [];
 let i = 0;
-let lastShakeTime = Date.now();
-const shakeInterval = 1000;
 
 function handleDeviceShake(event) {
 	if(i > 2) return;
@@ -15,22 +13,13 @@ function handleDeviceShake(event) {
         Math.pow(acceleration.z, 2)
     );
 
-	if(!chosenCards[0]){
-		if (magnitude > threshold) {
-			chosenCards.push(getRandomCard(i, chosenCards)); // Викликаємо функцію для отримання випадкової карти
-			i++;
-			lastShakeTime = Date.now();
-		}
-	} else {
-		const threshold = 100; // Порогове значення для визначення тряски
-		if (magnitude > threshold && (Date.now() - lastShakeTime + 1000) > shakeInterval) {
-			chosenCards.push(getRandomCard(i, chosenCards)); // Викликаємо функцію для отримання випадкової карти
-			i++;
-			lastShakeTime = Date.now();
-		}
-	}
-	
-    
+    // Якщо величина прискорення перевищує певне порогове значення,
+    // тоді реагуємо на тряску телефона
+    const threshold = 50; // Порогове значення для визначення тряски
+    if (magnitude > threshold) {
+        chosenCards.push(getRandomCard(i, chosenCards)); // Викликаємо функцію для отримання випадкової карти
+		i++;
+    }
 }
 
 window.addEventListener('devicemotion', handleDeviceShake);
