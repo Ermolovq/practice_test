@@ -13,9 +13,10 @@
 				<img id="card2" src="images/card_back.jpg" alt="Карта 2">
 				<img id="card3" src="images/card_back.jpg" alt="Карта 3">
 			</div>
-			<button onclick="getRandomCards()">Трясти телефон</button>
+			<button onclick="chosenCards.push(getRandomCard(i)); i++">Трясти телефон</button>
 		</div>
-		<script src="getRandomCards.js"></script>
+		
 		<script src="handleDeviceShake.js"></script>
+		<script src="getRandomCard.js"></script>
 	</body>
 </html>

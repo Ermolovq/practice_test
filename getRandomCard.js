@@ -1,19 +1,20 @@
-function getRandomCard(int i) {
+function getRandomCard(i, chosenCards) {
     const cards = ['images/card_1.png', 'images/card_2.png', 'images/card_3.png', 'images/card_4.png', 'images/card_5.png']; // список доступних карт
-    chosenCards = [];
-	bool = true;
+    let bool = true;
+	let randomIndex;
 
-    // Вибираємо випадкову карту
-	while (bool) {
-		const randomIndex = Math.floor(Math.random() * cards.length);
-		if (randomIndex != chosenCards[0] || randomIndex != chosenCards[1]){
-			chosenCards[i] = randomIndex;
+    // Вибираємо випадкову карту, перевіряючи, чи вона ще не була вибрана
+    while (bool) {
+		randomIndex = Math.floor(Math.random() * cards.length);
+		if (!chosenCards.includes(randomIndex)) {
+			chosenCards.push(randomIndex);
 			bool = false;
 		}
-	}
+    }
+
     // Встановлюємо вибрану карту на сторінку
-	const cardImg = document.getElementById(`card${i}`);
-	cardImg.src = chosenCards[i];
-	
-	return i+1;
+    const cardImg = document.getElementById(`card${i+1}`);
+    cardImg.src = cards[randomIndex]; // використовуємо випадковий індекс для вибору карти з масиву cards
+
+    return randomIndex; // повертаємо індекс наступної карти
 }
