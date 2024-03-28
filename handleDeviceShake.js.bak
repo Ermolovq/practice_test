@@ -1,5 +1,7 @@
 const chosenCards = [];
 let i = 0;
+let lastShakeTime = Date.now();
+const shakeInterval = 1000;
 
 function handleDeviceShake(event) {
 	if(i > 2) return;
@@ -16,10 +18,10 @@ function handleDeviceShake(event) {
     // Якщо величина прискорення перевищує певне порогове значення,
     // тоді реагуємо на тряску телефона
     const threshold = 100; // Порогове значення для визначення тряски
-    if (magnitude > threshold) {
+    if (magnitude > threshold && (Date.now() - lastShakeTime) > shakeInterval) {
         chosenCards.push(getRandomCard(i, chosenCards)); // Викликаємо функцію для отримання випадкової карти
 		i++;
-		setTimeout(function() {}, 1000);
+		lastShakeTime = Date.now();
     }
 }
 
