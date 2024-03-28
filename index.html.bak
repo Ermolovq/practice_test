@@ -13,7 +13,7 @@
 				<img id="card2" src="images/card_back.jpg" alt="Карта 2">
 				<img id="card3" src="images/card_back.jpg" alt="Карта 3">
 			</div>
-			<button id="newCard" onclick="getRandomCard();">Активувати програму</button>
+			<button id="newCard" onclick="getRandomCard(i, chosenCards);">Отримати нову карту</button>
 		</div>
 		
 		<script src="handleDeviceShake.js"></script>

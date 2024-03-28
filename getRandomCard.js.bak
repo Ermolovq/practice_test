@@ -15,6 +15,6 @@ function getRandomCard(i, chosenCards) {
     // Встановлюємо вибрану карту на сторінку
     const cardImg = document.getElementById(`card${i+1}`);
     cardImg.src = cards[randomIndex]; // використовуємо випадковий індекс для вибору карти з масиву cards
-
+	setTimeout(1000);
     return randomIndex; // повертаємо індекс наступної карти
 }
