@@ -21,5 +21,3 @@ function handleDeviceShake(event) {
 		i++;
     }
 }
-
-window.addEventListener('devicemotion', handleDeviceShake);

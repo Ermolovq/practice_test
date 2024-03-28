@@ -1,4 +1,4 @@
-if (typeof DeviceMotionEvent.requestPermission === 'function') {
+if (typeof(DeviceMotionEvent) !== 'undefined' && typeof(DeviceMotionEvent.requestPermission) === 'function') {
     DeviceMotionEvent.requestPermission()
     .then(permissionState => {
         if (permissionState === 'granted') {
