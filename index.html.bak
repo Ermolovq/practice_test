@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Карти Таро</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="cards">
+				<img id="card1" src="images/card_back.jpg" alt="Карта 1">
+				<img id="card2" src="images/card_back.jpg" alt="Карта 2">
+				<img id="card3" src="images/card_back.jpg" alt="Карта 3">
+			</div>
+			<button id="newCard" onclick="window.addEventListener('devicemotion', handleDeviceShake);">Трясти телефон</button>
+		</div>
+		
+		<script src="handleDeviceShake.js"></script>
+		<script src="getRandomCard.js"></script>
+	</body>
+</html>
