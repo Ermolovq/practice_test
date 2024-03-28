@@ -19,15 +19,7 @@ function handleDeviceShake(event) {
     if (magnitude > threshold) {
         chosenCards.push(getRandomCard(i, chosenCards)); // Викликаємо функцію для отримання випадкової карти
 		i++;
-		window.removeEventListener('devicemotion', handleDeviceShake);
-		const newCard = getElementById('newCard');
-		newCard.textContent = "До наступної карти";
     }
 }
 
-window.onload = function() {
-	const newCardButton = document.getElementById('newCard');
-	newCardButton.onclick = function() {
-		window.addEventListener('devicemotion', handleDeviceShake);
-	};
-};
+window.addEventListener('devicemotion', handleDeviceShake);
