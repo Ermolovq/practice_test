@@ -12,7 +12,7 @@ function getRandomCard(int i) {
 		}
 	}
     // Встановлюємо вибрану карту на сторінку
-	const cardImg = document.getElementById(`card${i + 1}`);
+	const cardImg = document.getElementById(`card${i}`);
 	cardImg.src = chosenCards[i];
 	
 	return i+1;
