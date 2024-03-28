@@ -1,8 +1,6 @@
 const chosenCards = [];
 let i = 0;
 
-window.addEventListener('devicemotion', handleDeviceShake);
-
 function handleDeviceShake(event) {
 	if(i > 2) return;
     // Отримуємо дані про прискорення з події
@@ -22,9 +20,8 @@ function handleDeviceShake(event) {
         chosenCards.push(getRandomCard(i, chosenCards)); // Викликаємо функцію для отримання випадкової карти
 		i++;
     }
+	
 	window.removeEventListener('devicemotion', handleDeviceShake);
+	const newCard = getElementById('newCard');
+	newCard.textContent = "До наступної карти";
 }
-
-
-const newCard = getElementById('newCard');
-newCard.textContent = "До наступної карти";
