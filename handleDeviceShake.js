@@ -1,6 +1,6 @@
 let lastShakeTime = Date.now();
 const shakeInterval = 3000;
-i = 0;
+let i = 0;
 
 function handleDeviceShake(event) {
 	if(i > 2) return;
