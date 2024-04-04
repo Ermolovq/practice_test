@@ -3,7 +3,7 @@ const cardCondition = [];
 let thisCard = 1;
 
 function handleDeviceShake(event) {
-	if(thisCard > 2) return;
+	if(thisCard > 3) return;
     // Отримуємо дані про прискорення з події
     const acceleration = event.accelerationIncludingGravity;
 

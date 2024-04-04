@@ -18,7 +18,7 @@ function handleDeviceShake(event) {
     // тоді реагуємо на тряску телефона
     const threshold = 50; // Порогове значення для визначення тряски
     if (magnitude > threshold) {
-        getRandomCard(thisCard, chosenCards, cardCondition, cards); // Викликаємо функцію для отримання випадкової карти
+        getRandomCard(thisCard, chosenCards, cardCondition, cards);
 		window.removeEventListener('devicemotion', handleDeviceShake);
 		thisCard++;
 		setTimeout(function() {
