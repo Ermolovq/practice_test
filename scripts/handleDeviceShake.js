@@ -1,8 +1,9 @@
 const chosenCards = [];
-let currentCard = 0;
+const cardCondition = [];
+let thisCard = 1;
 
 function handleDeviceShake(event) {
-	if(currentCard > 2) return;
+	if(thisCard > 2) return;
     // Отримуємо дані про прискорення з події
     const acceleration = event.accelerationIncludingGravity;
 
@@ -17,7 +18,11 @@ function handleDeviceShake(event) {
     // тоді реагуємо на тряску телефона
     const threshold = 50; // Порогове значення для визначення тряски
     if (magnitude > threshold) {
-        getRandomCard(currentCard, chosenCards); // Викликаємо функцію для отримання випадкової карти
-		currentCard++;
+        getRandomCard(thisCard, chosenCards, cardCondition, cards);
+		window.removeEventListener('devicemotion', handleDeviceShake);
+		thisCard++;
+		setTimeout(function() {
+			window.addEventListener('devicemotion', handleDeviceShake);
+		}, 1000);
     }
 }

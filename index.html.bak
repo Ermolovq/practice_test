@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Карти Таро</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="main">
+			<div class="card"><img id="img_card1" class="img_card" src="images/card_back.jpg" alt="Карта 1"><p id="description_card1"></p></div>
+			<div class="card"><img id="img_card2" class="img_card" src="images/card_back.jpg" alt="Карта 2"><p id="description_card2"></p></div>
+			<div class="card"><img id="img_card3" class="img_card" src="images/card_back.jpg" alt="Карта 3"><p id="description_card3"></p></div>
+		</div>
+		<div class="startMain">
+			<div><button id="startMain" onclick="checkIOS(); startMain.style.display = 'none';">Розпочати</button></div>
+			<div><button id="test_newCard" onclick="getRandomCard(thisCard, chosenCards, cardCondition, cards); thisCard++;">Отримати нову карту(тест)</button></div>
+		</div>
+		
+		<script src="scripts/other.js"></script>
+		<script src="scripts/Card.js"></script>
+		<script src="scripts/createCards.js"></script>
+		<script src="scripts/handleDeviceShake.js"></script>
+		<script src="scripts/checkIOS.js"></script>
+		<script src="scripts/getRandomCard.js"></script>
+	</body>
+</html>
