@@ -1,7 +1,3 @@
-const chosenCards = [];
-const cardCondition = [];
-let thisCard = 1;
-
 function handleDeviceShake(event) {
 	if(thisCard > 3) return;
     // Отримуємо дані про прискорення з події
@@ -21,6 +17,7 @@ function handleDeviceShake(event) {
         getRandomCard(thisCard, chosenCards, cardCondition, cards);
 		window.removeEventListener('devicemotion', handleDeviceShake);
 		thisCard++;
+		checkCards(thisCard);
 		setTimeout(function() {
 			window.addEventListener('devicemotion', handleDeviceShake);
 		}, 1000);
