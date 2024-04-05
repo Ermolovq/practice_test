@@ -1,5 +1,6 @@
 body {
 	display: flex;
+	flex-direction: column;
     justify-content: center;
     align-items: center;
     max-height: 100vh;
@@ -8,7 +9,6 @@ body {
 .main {
     display: flex;
     justify-content: center;
-    font-size: 8pt;
     width: 60%;
     height: 60vh;
 }
@@ -30,6 +30,7 @@ body {
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 5px;
+	font-size: 10pt;
 }
 
 .card_name {
@@ -41,20 +42,27 @@ body {
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 5px;
+	font-size: 12pt;
 }
 
 .buttons {
+	display: flex;
+	flex-direction: column;
 	position: fixed;
-    font-size: 16px;
+	justify-content: center;
+	align-items: center;
 	width: 100%;
 	bottom: 5%;
-	padding: 5%;
 }
 
 .mainButton {
 	display: flex;
 	justify-content: center;
-	
+	text-transform: translate(-50%, -50%);
+	font-size: 20pt;
+	width: 300px;
+	height: 50px;
+	margin: 10px;
 }
 
 .mainButton p {
