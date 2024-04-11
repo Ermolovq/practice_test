@@ -1,1 +1,1 @@
-(Запустити сайт)[https://ermolovq.github.io/practice_test/]
+[Запустити сайт](https://ermolovq.github.io/practice_test/)
