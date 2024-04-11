@@ -4,19 +4,58 @@
 		<title>Карти Таро</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="style.css">
+		<script src="scripts/checkDevice.js"></script>
 	</head>
 	<body>
-		<div class="main">
-			<div class="card"><img id="img_card1" class="img_card" alt="Минуле"><p id="description_card1" class="card_description"></p><p id="name_card1" class="card_name"></p></div>
-			<div class="card"><img id="img_card2" class="img_card" alt="Теперішнє"><p id="description_card2" class="card_description"></p><p id="name_card2" class="card_name"></p></div>
-			<div class="card"><img id="img_card3" class="img_card" alt="Майбутнє"><p id="description_card3" class="card_description"></p><p id="name_card3" class="card_name"></p></div>
+		<div id="up">
+			<div id="logo">
+				<a href="https://sites.google.com/polytechnic.co.cc/main/%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BD%D0%B0/%D1%81%D0%BF%D0%B5%D1%86%D1%96%D0%B0%D0%BB%D1%96%D0%B7%D0%B0%D1%86%D1%96%D1%97?authuser=0"><img src="images/logo.png"></a>
+			</div>
+			<div id="menu">
+				<div class="menu">
+					<a href="choice.html">Головна</a>
+				</div>
+				<div class="menu" id="current-html">
+					<p>Карти Таро</p>
+				</div>
+				<div class="menu">
+					<a href="askquestion.html">Магічна куля</a>
+				</div>
+				<div class="menu">
+					<a href="about.html">Про спеціальність</a>
+				</div>
+			</div>
+			<div id="music">
+				<img src="images/play.png" id="music-icon">
+			</div>
+		</div>
+		<div id="main">
+			<div class="card" id="card1">
+				<p class="tense">Минуле</p>
+				<img id="img-card1" class="img-card" alt="Минуле">
+				<p id="name-card1" class="card-name"></p>
+				<p id="description-card1" class="card-description"></p>
+			</div>
+			<div class="card" id="card2">
+				<p class="tense">Теперішнє</p>
+				<img id="img-card2" class="img-card" alt="Теперішнє">
+				<p id="name-card2" class="card-name"></p>
+				<p id="description-card2" class="card-description"></p>
+			</div>
+			<div class="card" id="card3">
+				<p class="tense">Майбутнє</p>
+				<img id="img-card3" class="img-card" alt="Майбутнє">
+				<p id="name-card3" class="card-name"></p>
+				<p id="description-card3" class="card-description"></p>
+			</div>
 		</div>
 		
-		<div class="buttons">
-			<div class="mainButton"><button id="mainButton" onclick="checkIOS(); mainButton.style.display = 'none'; shakePhone.style.display = 'flex';">Розпочати</button><p id="shakePhone">Потрясіть телефон тричі</p></div>
-			<div class="mainButton"><button id="test_newCard" onclick="getRandomCard(thisCard, chosenCards, cardCondition, cards); thisCard++; checkCards(thisCard);">Отримати нову карту(тест)</button></div>
+		<div id="down">
 		</div>
+		
+		<audio id="song">
+			<source src="music/song.mp3" type="audio/mp3">
+		</audio>
 		
 		<script src="scripts/other.js"></script>
 		<script src="scripts/checkCards.js"></script>
@@ -25,5 +64,7 @@
 		<script src="scripts/handleDeviceShake.js"></script>
 		<script src="scripts/checkIOS.js"></script>
 		<script src="scripts/getRandomCard.js"></script>
+		<script src="scripts/createButton.js"></script>
+		<script src="scripts/music.js"></script>
 	</body>
 </html>

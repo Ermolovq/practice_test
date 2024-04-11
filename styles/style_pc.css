@@ -1,0 +1,335 @@
+body {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	max-height: 100vh;
+	max-width: 100vw;
+	background-color: #46608a;
+	font-family: Arial;
+}
+
+
+/* menu */
+
+#up {
+	display: flex;
+	flex-direction: row;
+}
+
+#menu {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	font-size: 16pt;
+	width: 800px;
+	height: 50px;
+}
+
+.menu {
+	display: flex;
+	flex-direction: row;
+	background-color: rgba(100, 100, 100, 0.3);
+	width: 200px;
+	height: 50px;
+	margin: 3px;
+	border: 2px solid transparent;
+	border-color: rgb(255, 255, 50);
+	animation: neon-animation 1.5s infinite alternate;
+}
+
+#current-html {
+	border: 0;
+	justify-content: center;
+    align-items: center;
+	background-color: rgba(0, 0, 0, 0);
+	color: rgb(50, 255, 255);
+	animation: current-text-neon-animation 1.5s infinite alternate;
+}
+
+#current-html p {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	width: 200px;
+	height: 50px;
+}
+
+#menu a {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	width: 200px;
+	height: 50px;
+	color: rgb(255, 255, 50);
+	text-decoration: none;
+	animation: text-neon-animation 1.5s infinite alternate-reverse;
+}
+
+#logo {
+	margin-right: 275px;
+}
+
+#logo img{
+	width: 75px;
+	height: 75px;
+}
+
+#music {
+	margin-left: 275px;
+}
+
+#music img{
+	width: 75px;
+	height: 75px;
+}
+
+
+/* main */
+
+#main {
+	display: flex;
+	justify-content: center;
+    align-items: center;
+	color: rgb(255, 255, 50);
+	animation: text-neon-animation 1.5s infinite alternate;
+}
+
+
+/* choice.html */
+
+#choice-main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    align-items: center;
+}
+
+#main-logo {
+	position: absolute;
+	top: 100px;
+}
+
+#main-logo img{
+	width: 300px;
+	height: 300px;
+}
+
+#choice {
+	justify-content: center;
+    align-items: center;
+	position: absolute;
+	top: 450px;
+}
+
+.choice {
+	display: flex;
+	justify-content: center;
+    align-items: center;
+	background-color: rgba(100, 100, 100, 0.3);
+	width: 200px;
+	height: 50px;
+	margin: 20px;
+	border: 2px solid transparent;
+	border-color: rgb(255, 255, 50);
+	animation: neon-animation 1.5s infinite alternate;
+}
+
+.choice a{
+	display: flex;
+	justify-content: center;
+    align-items: center;
+	position: absolute;
+	width: 200px;
+	height: 50px;
+	color: rgb(255, 255, 50);
+	text-decoration: none;
+	font-size: 16pt;
+	text-align: center;
+	border: 2px solid transparent;
+	background-color: rgba(100, 100, 100, 0.3);
+	animation: neon-animation 1.5s infinite alternate,
+			   text-neon-animation 1.5s infinite alternate-reverse;
+}
+
+
+/* index.html */
+
+.card {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+    align-items: center;
+	width: 200px;
+	height: 300px;
+	margin: 50px;
+}
+
+.tense {
+	position: absolute;
+	top: -40px;
+	width: 200px;
+	font-size: 16pt;
+	text-align: center;
+	color: rgb(50, 255, 255);
+	animation: current-text-neon-animation 1.5s infinite alternate;
+}
+
+.card img {
+	display: flex;
+	position: absolute;
+	width: 180px;
+	height: 260px;
+	border: 2px solid transparent;
+	animation: neon-animation 1.5s infinite alternate;
+}
+
+.card-description {
+	display: flex;
+	justify-content: center;
+    align-items: center;
+	position: absolute;
+	width:180px;
+	height: 260px;
+	backdrop-filter: blur(2px);
+	-webkit-backdrop-filter: blur(2px);
+	text-align: center;
+	color: rgb(50, 255, 255);
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.card-name {
+	position: absolute;
+	bottom: 30px;
+	width: 200px;
+	bottom: -40px;
+	font-size: 16pt;
+	text-align: center;
+	color: rgb(50, 255, 255);
+	animation: current-text-neon-animation 1.5s infinite alternate;
+}
+
+#down {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+	width: 200px;
+	height: 50px;
+	bottom: 7px;
+	font-family: Arial;
+	font-size: 16pt;
+	color: rgb(255, 255, 50);
+	animation: text-neon-animation 1.5s infinite alternate-reverse;
+}
+
+#down button {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+	width: 200px;
+	height: 50px;
+	color: rgb(255, 255, 50);
+	font-family: Arial;
+	font-size: 16pt;
+	text-decoration: none;
+	background-color: rgba(100, 100, 100, 0.3);
+	animation: neon-animation 1.5s infinite alternate,
+			   text-neon-animation 1.5s infinite alternate-reverse;
+}
+
+
+/* askquestion.html */
+
+#info {
+	
+}
+
+.shake {
+	animation: shake 1s;
+}
+
+/* animations */
+
+@keyframes neon-animation {
+    0% {
+        border-color: rgba(255, 255, 50, 1);
+		box-shadow:  0 0 3px 3px rgba(255, 255, 50, 1);
+    }
+	100% {
+        border-color: rgba(255, 255, 50, 0.7);
+		box-shadow:  0 0 3px 3px rgba(255, 255, 50, 0.5);
+    }
+}
+
+@keyframes text-neon-animation {
+    0% {
+		text-shadow: 0 0 5px rgba(255, 255, 50, 0.8);
+    }
+	100% {
+		text-shadow: 0 0 5px rgba(255, 255, 50, 0.5);
+    }
+}
+
+@keyframes current-text-neon-animation {
+    0% {
+		text-shadow: 0 0 5px rgba(50, 255, 255, 0.8);
+    }
+	100% {
+		text-shadow: 0 0 5px rgba(50, 255, 255, 0.5);
+    }
+}
+
+@keyframes shake {
+	0% {
+		transform: translate(4px, 4px) rotate(0deg);
+	}
+
+	10% {
+		transform: translate(-4px, -4px) rotate(-1deg);
+	}
+
+	20% {
+		transform: translate(-7px, 0px) rotate(1deg);
+	}
+
+	30% {
+		transform: translate(7px, 4px) rotate(0deg);
+	}
+
+	40% {
+		transform: translate(4px, -4px) rotate(1deg);
+	}
+
+	50% {
+		transform: translate(-4px, 4px) rotate(-1deg);
+	}
+
+	60% {
+		transform: translate(-7px, 4px) rotate(0deg);
+	}
+
+	70% {
+		transform: translate(7px, 4px) rotate(-1deg);
+	}
+
+	80% {
+		transform: translate(-4px, -4px) rotate(1deg);
+	}
+
+	90% {
+		transform: translate(4px, 4px) rotate(0deg);
+	}
+
+	100% {
+		transform: translate(4px, -4px) rotate(-1deg);
+	}
+}
+
+#fortune {
+	text-align: center;
+}

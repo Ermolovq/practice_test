@@ -33,11 +33,11 @@ card4.set_description("present", "inversed", "Опис четвертої кар
 card4.set_description("future", "inversed", "Опис четвертої карти в майбутньому часі, перевенута");
 
 let card5 = new Card("карта 5", "images/card_5.png");
-card5.set_description("past", "normal", "Опис четвертої карти в минулому часі, не перевернута.");
-card5.set_description("present", "normal", "Опис четвертої карти в теперішньому часі, не перевенута.");
-card5.set_description("future", "normal", "Опис четвертої карти в майбутньому часі, не перевенута.");
-card5.set_description("past", "inversed", "Опис четвертої карти в минулому часі, перевенута.");
-card5.set_description("present", "inversed", "Опис четвертої карти в теперішньому часі, перевенута");
-card5.set_description("future", "inversed", "Опис четвертої карти в майбутньому часі, перевенута");
+card5.set_description("past", "normal", "Опис п'ятої карти в минулому часі, не перевернута.");
+card5.set_description("present", "normal", "Опис п'ятої карти в теперішньому часі, не перевенута.");
+card5.set_description("future", "normal", "Опис п'ятої карти в майбутньому часі, не перевенута.");
+card5.set_description("past", "inversed", "Опис п'ятої карти в минулому часі, перевенута.");
+card5.set_description("present", "inversed", "Опис п'ятої карти в теперішньому часі, перевенута");
+card5.set_description("future", "inversed", "Опис п'ятої карти в майбутньому часі, перевенута");
 
 const cards = [card1, card2, card3, card4, card5]; // Створення списку доступних карт

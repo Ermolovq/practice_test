@@ -1,0 +1,156 @@
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	max-height: 100vh;
+	background-color: #e6de00;
+	position: relative;
+}
+
+.main {
+	display: flex;
+	justify-content: center;
+	width: 60%;
+	height: 60vh;
+}
+
+.card {
+	position: relative;
+	/* Зробити блок позиціонованим */
+	display: inline-block;
+	width: 200px;
+	height: 350px;
+	margin: 5%;
+}
+
+.card_description {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 10px;
+	background-color: rgba(255, 255, 255, 0.7);
+	border-radius: 5px;
+	font-size: 10pt;
+}
+
+.card_name {
+	display: none;
+	position: absolute;
+	top: 5%;
+	left: 50%;
+	transform: translate(-50%, 95%);
+	padding: 10px;
+	background-color: rgba(255, 255, 255, 0.7);
+	border-radius: 5px;
+	font-size: 12pt;
+}
+
+.buttons {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	bottom: 5%;
+}
+
+.mainButton {
+	display: flex;
+	justify-content: center;
+	text-transform: translate(-50%, -50%);
+	font-size: 20pt;
+	width: 300px;
+	height: 50px;
+	margin: 10px;
+}
+
+.mainButton p {
+	display: none;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+.img_card {
+	display: none;
+}
+
+.logo {
+	width: 380px;
+	height: 394px;
+}
+
+.ball {
+	width: auto;
+	height: auto;
+}
+
+.shake {
+
+	animation: shake 1s;
+}
+
+@keyframes shake {
+	0% {
+		transform: translate(4px, 4px) rotate(0deg);
+	}
+
+	10% {
+		transform: translate(-4px, -4px) rotate(-1deg);
+	}
+
+	20% {
+		transform: translate(-7px, 0px) rotate(1deg);
+	}
+
+	30% {
+		transform: translate(7px, 4px) rotate(0deg);
+	}
+
+	40% {
+		transform: translate(4px, -4px) rotate(1deg);
+	}
+
+	50% {
+		transform: translate(-4px, 4px) rotate(-1deg);
+	}
+
+	60% {
+		transform: translate(-7px, 4px) rotate(0deg);
+	}
+
+	70% {
+		transform: translate(7px, 4px) rotate(-1deg);
+	}
+
+	80% {
+		transform: translate(-4px, -4px) rotate(1deg);
+	}
+
+	90% {
+		transform: translate(4px, 4px) rotate(0deg);
+	}
+
+	100% {
+		transform: translate(4px, -4px) rotate(-1deg);
+	}
+}
+
+#fortune {
+	text-align: center;
+}
+
+.music {
+	display: flex;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
